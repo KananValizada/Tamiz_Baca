@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 import fb from "../assets/facebook.svg";
 import instagram from "../assets/instagram.svg";
@@ -6,6 +7,7 @@ import instagram from "../assets/instagram.svg";
 const Navbar = () => {
   const [iconName, setIconName] = useState("menu-outline");
   const [classes, setClasses] = useState("top-[80px] opacity-100");
+  const navigate = useNavigate();
   const burgerClickHandler = (e) => {
     if (iconName == "menu-outline") {
       setIconName("close-outline");
@@ -17,8 +19,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="p-5 bg-white shadow md:flex md:items-center md:justify-between ">
-      <div className="flex justify-between items-center">
+    <nav className="md:px-20 py-5 px-5 bg-white shadow md:flex md:items-center md:justify-between ">
+      <div
+        className="flex justify-between items-center"
+        onClick={() => navigate("/")}
+      >
         <span className="text-3xl font-[Poppins] cursor-pointer">
           <img className="h-10 inline " src={logo} />
           Tüstü baca
@@ -35,14 +40,20 @@ const Navbar = () => {
       w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 md:pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${classes}`}
       >
         <li className="mx-4 my-6 md:my-0">
-          <a href="#" className="text-xl hover:text-cyan-500 duration-500">
+          <div
+            className="text-xl hover:text-cyan-500 duration-500 cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             Əsas səhifə
-          </a>
+          </div>
         </li>
         <li className="mx-4 my-6 md:my-0">
-          <a href="#" className="text-xl hover:text-cyan-500 duration-500">
+          <div
+            onClick={() => navigate("/about")}
+            className="text-xl hover:text-cyan-500 duration-500 cursor-pointer"
+          >
             Haqqımızda
-          </a>
+          </div>
         </li>
         <li className="mx-4 my-6 md:my-0">
           <a href="#" className="text-xl hover:text-cyan-500 duration-500">
