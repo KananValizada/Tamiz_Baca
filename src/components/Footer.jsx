@@ -17,7 +17,7 @@ const Footer = () => {
               fill="#0369a1"
               className="h-10 inline w-[60px] h-[60px]"
             />
-            <span className="text-[#0369a1]"> Təmiz</span> nəfəs
+            <span className="text-[#0369a1]"> Sağlam</span> nəfəs
           </span>
           <p>
             Management Plumbing includes a broad range of activities, and the

@@ -26,7 +26,7 @@ const Navbar = () => {
       >
         <span className="text-3xl font-[Poppins] cursor-pointer">
           <img className="h-10 inline " src={logo} />
-          Tüstü baca
+          Sağlam nəfəs
         </span>
         <span className="text-3xl cursor-pointer md:hidden block">
           <ion-icon
@@ -56,9 +56,12 @@ const Navbar = () => {
           </div>
         </li>
         <li className="mx-4 my-6 md:my-0">
-          <a href="#" className="text-xl hover:text-cyan-500 duration-500">
+          <div
+            onClick={() => navigate("/services")}
+            className="text-xl hover:text-cyan-500 duration-500 cursor-pointer"
+          >
             Xidmətlər
-          </a>
+          </div>
         </li>
         <li className="mx-4 my-6 md:my-0">
           <a href="#" className="text-xl hover:text-cyan-500 duration-500">

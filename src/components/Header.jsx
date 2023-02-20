@@ -1,6 +1,6 @@
 import React from "react";
 import worker from "../assets/worker2.jpg";
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <div
       style={{ backgroundImage: `url(${worker})` }}
@@ -11,7 +11,7 @@ const Header = () => {
         className="flex w-full h-full items-center justify-center"
       >
         <p className="text-[40px] text-white font-bold font-[Calibre]">
-          Haqqımızda
+          {title}
         </p>
       </div>
     </div>

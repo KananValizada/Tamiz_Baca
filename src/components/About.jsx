@@ -5,9 +5,9 @@ import Header from "./Header";
 const About = ({ from }) => {
   return (
     <>
-      {from != "HOME" && <Header />}
+      {from != "HOME" && <Header title="Haqqımızda" />}
 
-      <div className="flex px-[8%] font-[Calibre] mt-[100px]">
+      <div className="flex px-[8%] font-[Calibre] my-[100px]">
         <div className="mr-20 ">
           <img src={img7} className="max-w-[500px]" />
         </div>
