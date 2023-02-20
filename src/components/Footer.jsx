@@ -7,6 +7,13 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const scroolHandler = (endPoint) => {
+    window.scrollTo(0, 0);
+    navigate(endPoint);
+  };
+
   return (
     <>
       <div className="flex px-[8%] py-[100px] bg-[#253041] text-white justify-between">
@@ -20,23 +27,37 @@ const Footer = () => {
             <span className="text-[#0369a1]"> Sağlam</span> nəfəs
           </span>
           <p>
-            Management Plumbing includes a broad range of activities, and the
-            many firms and their members often define these practices.
+            Sağlam nəfəs komandası olaraq sizə daim keyfiyyətli xidmət təklif
+            edirik. Xidmətlərimiz geniş miqyaslı fəaliyyətləri əhatə edir və
+            gün-gündən müştərilərimizin sayı artır.
           </p>
         </div>
         <div className="flex flex-col color-white w-[200px]">
           <h1 className="font-semibold text-[20px] mb-5">QISA YOL</h1>
           <ul className="text-[#d7d7d7]">
-            <li className="hover:underline flex items-center cursor-pointer mb-3">
-              <BsChevronDoubleRight className="mr-2" /> Haqqımızda
+            <li
+              className="hover:underline flex items-center cursor-pointer mb-3 "
+              onClick={() => scroolHandler("/about")}
+            >
+              <BsChevronDoubleRight className="mr-2" />
+              Haqqımızda
             </li>
-            <li className="hover:underline flex items-center cursor-pointer mb-3">
+            <li
+              className="hover:underline flex items-center cursor-pointer mb-3"
+              onClick={() => scroolHandler("/services")}
+            >
               <BsChevronDoubleRight className="mr-2" /> Xidmətlər
             </li>
-            <li className="hover:underline flex items-center cursor-pointer mb-3">
+            <li
+              className="hover:underline flex items-center cursor-pointer mb-3"
+              onClick={() => scroolHandler("/projects")}
+            >
               <BsChevronDoubleRight className="mr-2" /> İşlərimiz
             </li>
-            <li className="hover:underline flex items-center cursor-pointer ">
+            <li
+              className="hover:underline flex items-center cursor-pointer "
+              onClick={() => scroolHandler("/contact")}
+            >
               <BsChevronDoubleRight className="mr-2" /> Əlaqə
             </li>
           </ul>

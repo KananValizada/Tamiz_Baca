@@ -11,9 +11,9 @@ const Services = () => {
         Xidmətlərimiz
       </div>
       <p className="text-center text-[#4c5165] mb-[60px] max-w-[50%] m-auto">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. has been the industry's standard dummy text ever since the
-        1500s.
+        Bacanızın mütamadi olaraq mütəxəssis tərəfindən yoxlanılması və
+        təmizlənməsi ailənizin təhlükəsizliyini təmin etmək üçün çox vacib
+        addımdır.
       </p>
       <div className="flex flex-wrap gap-5 justify-center">
         <ServiceCard

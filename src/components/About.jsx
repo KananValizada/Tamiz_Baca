@@ -1,8 +1,16 @@
 import React from "react";
 import img7 from "../assets/5.jpg";
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 const About = ({ from }) => {
+  const navigate = useNavigate();
+
+  const handleScrool = () => {
+    window.scrollTo(0, 0);
+    navigate("/about");
+  };
+
   return (
     <>
       {from != "HOME" && <Header title="Haqqımızda" />}
@@ -26,9 +34,14 @@ const About = ({ from }) => {
             komandanın təcrübəli ustalarını hər gün eyni həvəslə işləməyə sövq
             edir.
           </p>
-          <button className="px-10 py-3 bg-sky-700 text-white font-semibold text-[20px] rounded-xl hover:bg-sky-900 duration-500">
-            Daha ətraflı
-          </button>
+          {from == "HOME" && (
+            <button
+              className="px-10 py-3 bg-sky-700 text-white font-semibold text-[20px] rounded-xl hover:bg-sky-900 duration-500"
+              onClick={handleScrool}
+            >
+              Daha ətraflı
+            </button>
+          )}
         </div>
       </div>
     </>
